@@ -24,7 +24,7 @@ model Todo {
   status      Status        @default(pending)
   duedate     DateTime      @db.Date
   user_id     Int
-  user        User          @relation(fields: [user_id], references: [id])
+  user        User          @relation(fields: [user_id], references: [id], onDelete: Cascade)
 }
 
 enum Status {

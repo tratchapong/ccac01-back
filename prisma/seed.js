@@ -10,12 +10,22 @@ const userData = [
 ]
 
 const todoData = [
+  { title:'Learn HTML', duedate: new Date(), user_id: 1 },
+  { title:'Learn CSS', duedate: new Date(), user_id: 1 },
+  { title:'Learn JS', duedate: new Date(), user_id: 2 },
+  { title:'Learn React', duedate: new Date(), user_id: 3 },
 
 ]
 
 const run = async () => {
+  // await prisma.todo.deleteMany({})
+  // await prisma.user.deleteMany({})
+
   await prisma.user.createMany({
     data : userData
+  })
+  await prisma.todo.createMany({
+    data : todoData
   })
 }
 
