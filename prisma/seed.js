@@ -18,9 +18,6 @@ const todoData = [
 ]
 
 const run = async () => {
-  // await prisma.todo.deleteMany({})
-  // await prisma.user.deleteMany({})
-
   await prisma.user.createMany({
     data : userData
   })
