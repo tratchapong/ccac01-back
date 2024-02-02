@@ -13,9 +13,9 @@ app.use(express.json())
 
 // service
 app.use('/auth', authRoute)
-app.use('/useronly', authenticate,  (req, res, next) => {
-  res.json({user: req.user})
-})
+// app.use('/useronly', authenticate,  (req, res, next) => {
+//   res.json({user: req.user})
+// })
 
 // notFound
 app.use( notFound )
