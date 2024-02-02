@@ -46,7 +46,9 @@ module.exports.login = async (req, res, next) => {
     }
     // issue jwt token 
     const payload = { id: user.id }
-    const token = jwt.sign(payload, process.env.JWT_SECRET)
+    const token = jwt.sign(payload, process.env.JWT_SECRET, {
+      expiresIn: '30d'
+    })
     console.log(token)
     res.json({token : token})
   }catch(err) {
