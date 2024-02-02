@@ -11,6 +11,7 @@ module.exports.register = async (req, res, next) => {
     if (confirmPassword !== password) {
       throw new Error("confirm password not match");
     }
+    
     const hashedPassword = await bcrypt.hash(password, 8);
     console.log(hashedPassword);
     const data = {
