@@ -7,7 +7,7 @@ module.exports = async (req, res, next) => {
     if( !authorization ) {
       throw new Error('Unauthorized')
     }
-    if(!(authorization.startsWith('Bearer'))) {
+    if(!(authorization.startsWith('Bearer '))) {
       throw new Error('Unauthorized')
     }
     const token = authorization.split(' ')[1]
