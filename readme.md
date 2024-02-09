@@ -19,6 +19,7 @@ GET           /todos               1        none        none
 POST          /todos               1        none        {title, dueDate}
 PUT           /todos/:id           1        id          {title, dueDate, status}
 DELETE        /todos/:id           1        id          none
+GET           /todos/all-status    1        none        none
 
 <!-- service : getAllDuplicate
 method : GET
@@ -28,8 +29,6 @@ params : none
 query : title=xxxx
 body : none
 response : { id, title, status, du.....} -->
-
-
 
 
 

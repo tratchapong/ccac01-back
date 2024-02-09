@@ -1,4 +1,5 @@
 const db = require('../models/db')
+const {Status} = require('@prisma/client')
 
 exports.getByUser = async (req, res, next) => {
   try {
@@ -47,4 +48,8 @@ exports.deleteTodo = async (req, res, next) => {
   }catch(err) {
     next(err)
   }
+}
+
+exports.getAllStatus = async (req, res, next) => {
+  res.json({status: Object.values(Status)})
 }
